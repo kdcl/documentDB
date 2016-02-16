@@ -1,0 +1,78 @@
+{	"retCode":1,
+	"retVal":
+	{
+		"0001":
+			{
+				"sno":"0001",
+				"sna":"捷運市政府站(3號出口)",
+				"tot":"180",
+				"sbi":"52",
+				"sarea":"信義區",
+				"mday":"20160111003919",
+				"lat":"25.0408578889",
+				"lng":"121.567904444",
+				"ar":"忠孝東路\/松仁路(東南側)",
+				"sareaen":"Xinyi Dist.",
+				"snaen":"MRT Taipei City Hall Stataion(Exit 3)-2",
+				"aren":"The S.W. side of Road Zhongxiao East Road & Road Chung Yan.",
+				"bemp":"128",
+				"act":"1"},
+		"0002":
+			{
+				"sno":"0002",
+				"sna":"捷運國父紀念館站(2號出口)",
+				"tot":"48",
+				"sbi":"22",
+				"sarea":"大安區",
+				"mday":"20160111003939",
+				"lat":"25.041254",
+				"lng":"121.55742",
+				"ar":"忠孝東路四段\/光復南路口(西南側)",
+				"sareaen":"Daan Dist.",
+				"snaen":"MRT S.Y.S Memorial Hall Stataion(Exit 2.)",
+				"aren":"Sec,4. Zhongxiao E.Rd\/GuangFu S. Rd","bemp":"26","act":"1"},
+		"0003":
+			{
+				"sno":"0003",
+				"sna":"台北市政府",
+				"tot":"40",
+				"sbi":"4",
+				"sarea":"信義區",
+				"mday":"20160111003920",
+				"lat":"25.0377972222",
+				"lng":"121.565169444",
+				"ar":"台北市政府東門(松智路)",
+				"sareaen":"Xinyi Dist.",
+				"snaen":"Taipei City Hall",
+				"aren":"Taipei City Government Eastgate (Song Zhi Road)",
+				"bemp":"36","act":"1"},
+		"0004":
+			{
+				"sno":"0004",
+				"sna":"市民廣場",
+				"tot":"60",
+				"sbi":"4",
+				"sarea":"信義區",
+				"mday":"20160111003936",
+				"lat":"25.0360361111",
+				"lng":"121.562325",
+				"ar":"市府路\/松壽路(西北側)",
+				"sareaen":"Xinyi Dist.",
+				"snaen":"Citizen Square",
+				"aren":"The N.W. side of Road Shifu & Road Song Shou.",
+				"bemp":"54","act":"1"},
+		"0005":
+			{
+				"sno":"0005",
+				"sna":"興雅國中",
+				"tot":"60",
+				"sbi":"19",
+				"sarea":"信義區",
+				"mday":"20160111003925",
+				"lat":"25.0365638889",
+				"lng":"121.5686639",
+				"ar":"松仁路\/松仁路95巷(東南側)",
+				"sareaen":"Xinyi Dist.","snaen":"Xingya Jr. High School",
+				"aren":"The S.E. side of Road Songren & Ln. 95, Songren Rd..","bemp":"40","act":"1"}
+	}
+}
