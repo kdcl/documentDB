@@ -1,0 +1,23 @@
+{
+  "name": "documentdb",
+  "version": "1.0.0",
+  "description": "",
+  "main": "documentdbclient.js",
+  "dependencies": {
+    "documentdb": "^1.5.5"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kdcl/documentDB.git"
+  },
+  "author": "kdcl",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kdcl/documentDB/issues"
+  },
+  "homepage": "https://github.com/kdcl/documentDB#readme"
+}
