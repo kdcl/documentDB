@@ -50,7 +50,7 @@ client.createDatabase(databaseDefinition, function(err, database) {
     });
 });
 */
-
+/*
 var collectionUri = "dbs/" + config.dbDefinition.id + "/colls/" + config.collDefinition.id;
  for(i=0;i<youbikelist.length;i++){
             client.createDocument(collectionUri, youbikelist[i], function(err, document) {
@@ -58,6 +58,7 @@ var collectionUri = "dbs/" + config.dbDefinition.id + "/colls/" + config.collDef
              console.log("Document created with content: ", document);
         });
     }
+    */
 /*
 var docQuery = 'SELECT * FROM d WHERE d.sno="0001"';
 var collectionUri = "dbs/" + config.dbDefinition.id + "/colls/" + config.collDefinition.id;
@@ -77,3 +78,29 @@ client.queryDocuments(collectionUri, docQuery)
         }
     });
     */
+var queryCollection = function(documentId, callback) {
+  var querySpec = {
+      query: 'SELECT * FROM root r WHERE r.sno=@sno',
+      parameters: [{
+          name: '@sno',
+          value: documentId
+      }]
+  };
+
+  var collectionUri = "dbs/" + config.dbDefinition.id + "/colls/" + config.collDefinition.id;
+
+  client.queryDocuments(collectionUri, querySpec).toArray(function(err, results) {
+      if(err) 
+        return callback(err);
+
+      callback(null, results);
+  });
+};
+
+queryCollection("0001", function(err, results) {
+    if(err) return console.log(err);
+    console.log(results.length);
+    console.log(typeof(results));
+    // console.log('Query results:\n' + JSON.stringify(results, null, '\t') + '\n');
+    console.log('Query results:\n' + results[1].mday +'\n');
+});
