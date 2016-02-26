@@ -3,7 +3,7 @@ var config = {}
 config.endpoint = "https://testyoubikedb.documents.azure.com:443/";
 config.authKey = "jnjYPbVWgXVmZ2/9iHvGvEeLVvJ2DP0hUbn+Xwt3keay5NfRgnjXlPaNdMHZAUNUmMWTzfRaISr+SunXIWqbuw==";
 
-config.dbDefinition = {"id": "youbikes"};
+config.dbDefinition = {"id": "youbike2"};
 config.collDefinition = {"id": "youbikecollection"};
 
 var documents = {

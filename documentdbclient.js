@@ -11,7 +11,7 @@ var client = new documentdb.DocumentClient(urlConnection, auth);
  
 // 定義 Database 與 Collection 的名稱，以及 Document 內容
 var databaseDefinition = { 
-    "id": "youbikes" 
+    "id": "youbike2" 
 };
  
 var collectionDefinition = { 
@@ -25,10 +25,10 @@ var documentDefinition = {
     "state": "KS",
     "id": "67423"
 };
-var jsonObj = require("./YouBikeTP_2.json");
+var jsonObj = require("./public/javascripts/YouBikeTP.json");
 //console.log(JSON.stringify(jsonObj.retVal));
 var youbikelist = Object.keys(jsonObj.retVal).map(function(value){
-                                                    return jsonObj.retVal[value]})
+                                                    return jsonObj.retVal[value]});
 //console.log(youbikelist[0]);
 
 // 透過 Callback 方式呼叫 DocumentClient 物件的 createDatabase、createCollection、與 createDocument 方法
@@ -50,15 +50,15 @@ client.createDatabase(databaseDefinition, function(err, database) {
     });
 });
 */
-/*
-var collectionUri = "dbs/" + config.dbDefinition.id + "/colls/" + config.collDefinition.id;
- for(i=0;i<youbikelist.length;i++){
+setInterval(function(){var collectionUri = "dbs/" + config.dbDefinition.id + "/colls/" + config.collDefinition.id;
+ for(var i=0;i<youbikelist.length;i++){
             client.createDocument(collectionUri, youbikelist[i], function(err, document) {
             if (err) return console.log(err);
              console.log("Document created with content: ", document);
         });
-    }
-    */
+    }}, 1000*60*5);//1000*60*1
+
+    
 /*
 var docQuery = 'SELECT * FROM d WHERE d.sno="0001"';
 var collectionUri = "dbs/" + config.dbDefinition.id + "/colls/" + config.collDefinition.id;
@@ -96,11 +96,28 @@ var queryCollection = function(documentId, callback) {
       callback(null, results);
   });
 };
+// var i = 1;
+// setInterval(function() {
+//     i++;
+//     console.log('still alive!' + i);
+// }, 1000);
 
-queryCollection("0001", function(err, results) {
-    if(err) return console.log(err);
-    console.log(results.length);
-    console.log(typeof(results));
-    // console.log('Query results:\n' + JSON.stringify(results, null, '\t') + '\n');
-    console.log('Query results:\n' + results[1].mday +'\n');
-});
+// setInterval(writedatatodb, 1000*60*5);//1000*60*1
+
+// function writedatatodb(){
+//     queryCollection("0001", function(err, results) {
+//     if(err) return console.log(err);
+//     console.log(results.length);
+//     console.log(typeof(results));
+//     // console.log('Query results:\n' + JSON.stringify(results, null, '\t') + '\n');
+//     console.log('Query results:\n' + results[1].mday +'\n');
+//     });
+// }
+// writedatatodb();
+// queryCollection("0001", function(err, results) {
+//     if(err) return console.log(err);
+//     console.log(results.length);
+//     console.log(typeof(results));
+//     // console.log('Query results:\n' + JSON.stringify(results, null, '\t') + '\n');
+//     console.log('Query results:\n' + results[1].mday +'\n');
+// });
